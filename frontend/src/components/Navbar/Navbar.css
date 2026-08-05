@@ -1,0 +1,292 @@
+.navbar{
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+     
+}
+
+.navbar .logo{
+    width: 120px;
+}
+
+.navbar-menu{
+    display:flex;
+    list-style:none;
+    gap:25px;
+    color:#49557e;
+    font-size:16px;
+}
+
+.navbar-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size:15px;
+    color:#49557e;
+    border:1px solid tomato;
+    padding:8px 25px;
+    border-radius:50px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+.navbar-menu a {
+    position:relative;
+    cursor:pointer;
+    padding-bottom:4px;
+}
+
+
+/* underline animation */
+.navbar-menu a::after {
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:0;
+    height:2px;
+    background-color:#eda60d;
+    transform:translateX(-50%);
+    transition:width 0.3s ease;
+}
+
+
+.navbar-menu a.active::after {
+    width:100%;
+}
+
+
+.navbar-search-icon{
+    position:relative;
+}
+
+
+.navbar-search-icon .dot{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background-color:tomato;
+    border-radius:50%;
+    top:-5px;
+    right:-5px;
+}
+/* ===========================
+   Profile
+=========================== */
+
+.navbar-profile{
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-profile img{
+    width: 35px;
+    border-radius: 50%;
+}
+
+/* ===========================
+   Dropdown Menu
+=========================== */
+
+.dropword{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    background: #fff;
+    padding: 15px;
+    min-width: 180px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.navbar-profile:hover .dropword{
+    display: flex;
+}
+
+.dropword li{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropword li img{
+    width: 20px;
+}
+
+.dropword li p{
+    font-size: 15px;
+    color: #555;
+}
+
+.dropword li:hover p{
+    color: tomato;
+}
+
+.dropword hr{
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* ===========================
+   Hover Effects
+=========================== */
+
+.navbar button:hover{
+    background: tomato;
+    color: #fff;
+}
+
+.navbar-search-icon img{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar-search-icon img:hover{
+    transform: scale(1.1);
+}
+
+.navbar-right img{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar-right img:hover{
+    transform: scale(1.1);
+}
+
+/* ===========================
+   Active Menu
+=========================== */
+
+.navbar-menu a{
+    text-decoration: none;
+    color: #49557e;
+    transition: 0.3s;
+}
+
+.navbar-menu a:hover{
+    color: tomato;
+}
+
+@media (max-width:1050px){
+        .navbar .logo{
+        width:100px;
+    }
+
+    .navbar-menu{
+        gap:20px;
+        font-size:17px;
+    }
+
+    .navbar-right{
+        gap:30px;
+    }
+
+    .navbar-right img{
+        width:22px;
+    }
+
+    .navbar button{
+        padding:8px 25px;
+        
+    }
+}
+
+@media (max-width:900px){
+
+    .navbar .logo{
+        width:120px;
+    }
+
+    .navbar-menu{
+        gap:15px;
+        font-size:16px;
+    }
+
+    .navbar-right{
+        gap:20px;
+    }
+    .navbar-right img{
+        width:20px;
+    }
+
+    .navbar button{
+        padding:7px 20px;
+        font-size:15px;
+    }
+}
+
+@media (max-width:750px){
+
+    .navbar-menu{
+        display:none;
+    }
+     .navbar-right{
+        gap:15px;
+    }
+
+    .navbar button{
+        padding:7px 15px;
+        font-size:14px;
+    }
+
+    .dropword{
+        right:-10px;
+        min-width:160px;
+    }
+   
+}
+
+@media (max-width:480px){
+
+    .navbar{
+        padding:10px 0;
+    }
+
+    .navbar .logo{
+        width:90px;
+    }
+
+    .navbar-right{
+        gap:12px;
+    }
+
+    .navbar-right img{
+        width:20px;
+    }
+    .navbar{
+        padding:10px 5px;
+    }
+
+    .navbar button{
+        padding:6px 12px;
+        font-size:13px;
+    }
+
+    .dropword{
+        min-width:150px;
+        top:40px;
+    }
+
+    .dropword li p{
+        font-size:14px;
+    }
+}

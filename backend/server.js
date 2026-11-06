@@ -12,7 +12,7 @@ import reviewRouter from "./routes/reviewRoute.js";
 
 //app config
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 //middleware
 app.use(express.json());
@@ -34,8 +34,8 @@ app.get("/", (req, res) => {
   res.send("API Working");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server started on port ${PORT}`);
 });
 
 //

@@ -1,7 +1,14 @@
-// password=WHT052PJ7VnWe6C4
-// username:sdswathi790_db_user
-
 import mongoose from "mongoose";
-export const connectDB=async()=>{
-    await mongoose.connect('mongodb://sdswathi790_db_user:WHT052PJ7VnWe6C4@ac-ummnoup-shard-00-00.brjgqbo.mongodb.net:27017,ac-ummnoup-shard-00-01.brjgqbo.mongodb.net:27017,ac-ummnoup-shard-00-02.brjgqbo.mongodb.net:27017/BiteRush?ssl=true&replicaSet=atlas-r92v4r-shard-0&authSource=admin&appName=Cluster0').then(()=>console.log("DB connected"))
-}
+import dns from "node:dns";
+
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
+export const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("DB connected");
+  } catch (error) {
+    console.error("Database connection failed:", error);
+    process.exit(1);
+  }
+};

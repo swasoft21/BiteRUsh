@@ -1,0 +1,177 @@
+.my-orders-order {
+  display: grid;
+  grid-template-columns: 50px 2fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #e2e2e2;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.my-orders-order > img {
+  width: 45px;
+}
+
+.order-food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-food-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.review-button {
+  background: #fff;
+  color: tomato;
+  border: 1px solid tomato;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.review-button:hover {
+  background: tomato;
+  color: white;
+}
+
+.order-status .delivered {
+  color: green;
+  font-weight: 600;
+}
+
+/* Review modal */
+
+.review-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+.review-modal {
+  position: relative;
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.review-modal h2 {
+  margin-bottom: 8px;
+}
+
+.review-modal h3 {
+  color: tomato;
+  margin-bottom: 20px;
+}
+
+.review-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.review-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 8px;
+}
+
+.review-stars button {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.review-stars button.active {
+  color: #ffb400;
+}
+
+.rating-text {
+  color: #666;
+  font-size: 14px;
+}
+
+.review-modal textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+}
+
+.review-submit-button {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.review-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.review-error {
+  color: #d93025;
+  font-size: 14px;
+}
+
+.review-success {
+  color: green;
+  font-size: 14px;
+}
+
+@media (max-width: 750px) {
+  .my-orders-order {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+
+  .my-orders-order > p {
+    grid-column: 2;
+  }
+
+  .order-food-item {
+    flex-wrap: wrap;
+  }
+
+  .review-modal {
+    padding: 25px 20px;
+  }
+}

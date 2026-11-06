@@ -12,12 +12,12 @@
 }
 
 .list-table-format {
-    display: grid;
-    grid-template-columns: 100px 150px 120px 100px 1fr 120px;
-    align-items: center;
-    gap: 20px;
-    padding: 12px;
-    border: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 100px 150px 120px 100px 1fr 120px;
+  align-items: center;
+  gap: 20px;
+  padding: 12px;
+  border: 1px solid #ddd;
 }
 
 .list-table-format.title {
@@ -32,28 +32,160 @@
   border-radius: 8px;
 }
 .action-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .edit-icon,
 .delete-icon {
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .edit-icon {
-    color: #0d6efd;
+  color: #0d6efd;
 }
 
 .delete-icon {
-    color: #dc3545;
+  color: #dc3545;
 }
 
 .edit-icon:hover,
 .delete-icon:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* Action icons */
+.action-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.edit-icon {
+  color: #2878d0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  color: tomato;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Modal background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+/* Modal box */
+.edit-modal {
+  background: white;
+  width: 450px;
+  max-width: 100%;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.close-icon {
+  font-size: 20px;
+  color: #777;
+  cursor: pointer;
+}
+
+.edit-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-modal label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: #444;
+}
+
+.edit-modal input,
+.edit-modal textarea {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 17px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.edit-modal input:focus,
+.edit-modal textarea:focus {
+  border-color: tomato;
+}
+
+.edit-modal textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.modal-buttons button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  background: #eee;
+  color: #333;
+}
+
+.update-btn {
+  background: tomato;
+  color: white;
+}
+
+.update-btn:hover {
+  background: #e64d32;
+}
+
+.cancel-btn:hover {
+  background: #ddd;
 }

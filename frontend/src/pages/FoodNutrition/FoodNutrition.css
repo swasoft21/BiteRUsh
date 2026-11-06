@@ -1,0 +1,351 @@
+.nutrition-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #262626;
+}
+
+.nutrition-back {
+  border: none;
+  background: none;
+  color: tomato;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.nutrition-header {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  background: #fff8f5;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.nutrition-food-image {
+  width: 300px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.nutrition-food-info {
+  flex: 1;
+}
+
+.ai-label {
+  display: inline-block;
+  color: #e65b42;
+  background: #ffe6df;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nutrition-food-info h1 {
+  margin: 15px 0 10px;
+  font-size: 32px;
+}
+
+.nutrition-food-info p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.nutrition-food-info h3 {
+  color: tomato;
+  font-size: 22px;
+}
+
+.nutrition-section {
+  margin-top: 35px;
+}
+
+.nutrition-section h2 {
+  margin-bottom: 15px;
+}
+
+.nutrition-source {
+  margin-bottom: 18px;
+  color: #777;
+  font-size: 13px;
+}
+
+.nutrition-source p {
+  margin: 6px 0;
+}
+
+.source-verified,
+.source-estimated {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.source-verified {
+  color: #187747;
+  background: #e5f6ec;
+}
+
+.source-estimated {
+  color: #9a5a0b;
+  background: #fff1d8;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.nutrition-card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: white;
+}
+
+.nutrition-card p {
+  color: #777;
+  margin: 0 0 10px;
+}
+
+.nutrition-card h2 {
+  color: #e65b42;
+  margin: 0;
+  font-size: 22px;
+}
+
+.nutrition-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nutrition-tags span {
+  background: #f2f2f2;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.allergen-tags span {
+  background: #fff0e8;
+  color: #b34b2f;
+}
+
+.nutrition-insights {
+  padding-left: 22px;
+  line-height: 2;
+  color: #555;
+}
+
+.nutrition-disclaimer {
+  margin-top: 35px;
+  padding: 18px;
+  background: #fff8e8;
+  border-radius: 10px;
+  color: #6d5b32;
+  line-height: 1.7;
+}
+
+.nutrition-loading,
+.nutrition-error {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.nutrition-spinner {
+  width: 45px;
+  height: 45px;
+  border: 4px solid #eee;
+  border-top: 4px solid tomato;
+  border-radius: 50%;
+  animation: nutrition-spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes nutrition-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nutrition-error button {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ingredient-nutrition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ingredient-nutrition-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.ingredient-nutrition-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.ingredient-nutrition-card p {
+  color: #676767;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.ingredient-calories {
+  text-align: right;
+  min-width: 110px;
+}
+
+.ingredient-calories strong {
+  color: tomato;
+  font-size: 16px;
+}
+
+.source-unavailable {
+  color: #d9534f;
+  font-weight: 600;
+}
+/* Customer Reviews */
+
+.reviews-section {
+  margin-top: 30px;
+}
+
+.reviews-summary {
+  background: #fff8f3;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.reviews-average {
+  text-align: center;
+}
+
+.reviews-average h1 {
+  font-size: 42px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.reviews-average .review-stars {
+  justify-content: center;
+}
+
+.review-stars span {
+  font-size: 22px;
+  color: #ccc;
+}
+
+.review-stars span.active {
+  color: #ffb400;
+}
+
+.reviews-average p {
+  color: #777;
+  margin-top: 8px;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.review-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 18px;
+  background: white;
+}
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card-header h3 {
+  font-size: 16px;
+}
+
+.review-date {
+  color: #888;
+  font-size: 13px;
+}
+
+.review-comment {
+  margin-top: 10px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.no-reviews h3 {
+  margin-bottom: 8px;
+}
+
+.no-reviews p {
+  color: #777;
+}
+@media (max-width: 700px) {
+  .nutrition-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nutrition-food-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nutrition-food-info h1 {
+    font-size: 26px;
+  }
+  .ingredient-nutrition-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ingredient-calories {
+    text-align: left;
+  }
+}

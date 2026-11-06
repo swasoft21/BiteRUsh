@@ -1,0 +1,87 @@
+.food-display {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.food-hero-content h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+/* Heading */
+.food-display-heading {
+  margin-bottom: 25px;
+}
+
+.food-display-heading h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.food-display-heading p {
+  color: #777;
+  font-size: 15px;
+}
+
+/* Four cards per row */
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.no-food-message {
+  text-align: center;
+  color: #777;
+  padding: 35px 0;
+}
+
+/* View All */
+.view-all-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.view-all-foods-btn {
+  background: tomato;
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .food-display-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .food-hero {
+    min-height: 280px;
+    padding: 25px;
+  }
+
+  .food-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .food-display-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .food-display-list {
+    grid-template-columns: 1fr;
+  }
+}
